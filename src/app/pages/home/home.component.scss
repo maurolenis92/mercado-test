@@ -1,0 +1,10 @@
+@use '../../../styles/util/mixins' as mixin;
+
+:host {
+    @include mixin.createFlexbox(column, stretch, stretch, nowrap);
+    background-color: var(--color-white-meli);
+    height: 100vh;
+    section {
+        padding: 0 7rem;
+    }
+}

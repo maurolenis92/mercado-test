@@ -1,0 +1,44 @@
+@use '../../../styles/util/mixins' as mixin;
+
+.item-detail {
+    padding: 32px;
+    background-color: var(--color-white-meli-2);
+    &-box-first {
+        @include mixin.createFlexbox(row, stretch, stretch, nowrap);
+    }
+    &-image {
+        width: 680px;
+    }
+    &-first-column {
+        @include mixin.createFlexbox(column, stretch, stretch, nowrap);
+    }
+    &-price-description {
+        @include mixin.createFlexbox(column, stretch, stretch, nowrap);
+        &-t1 {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        &-t2 {
+            font-size: 24px;
+        }
+        &-t3 {
+            padding: 32px 0;
+            font-size: 46px;
+        }
+    }
+    &-button {
+        background-color: var(--color-blue-meli);
+        border: 0;
+        border-radius: 4px;
+        height: 35px;
+        color: var(--color-white-meli-2);
+    }
+    &-description-title {
+        margin-bottom: 32px;
+        font-size: 28px;
+    }
+    &-description-text {
+        margin: 0;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,27 @@
+@use '../../../styles/util/mixins' as mixin;
+
+.search-box {
+    background-color: var(--color-yellow-meli);
+    height: 60px;
+    @include mixin.createFlexbox(row, center, flex-start, nowrap);
+    padding: 0 7rem;
+    &-logo {
+        height: 40px;
+    }
+    &-input {
+        height: 40px;
+        padding: 0 1rem;
+        border: 0;
+        width: stretch;
+        margin-left: 1.5rem;
+    }
+    &-icon {
+        @include mixin.createFlexbox(row, center, center, nowrap);
+        height: 40px;
+        width: 60px;
+        background-color: var(--color-white-meli);
+        img {
+            height: 20px;
+        }
+    }
+}

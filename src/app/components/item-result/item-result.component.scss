@@ -1,0 +1,30 @@
+@use '../../../styles/util/mixins' as mixin;
+
+.item-results {
+    @include mixin.createFlexbox(row, stretch, stretch, nowrap);
+    background-color: var(--color-white-meli-2);
+    padding: 16px;
+    border-bottom: 1px solid var(--color-white-meli);
+    &-image {
+        width: 180px;
+        height: 180px;
+        border-radius: 4px;
+        margin-right: 16px
+    }
+    &-detail {
+        flex-grow: 4;
+        @include mixin.createFlexbox(column, stretch, stretch, nowrap);
+        width: 200px;
+    }
+    &-text-detail {
+        font-size: 18px;
+    }
+    &-price {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    &-location {
+        flex-grow: 1;
+        font-size: 12px;
+    }
+}
