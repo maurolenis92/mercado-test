@@ -12,7 +12,9 @@ export class SearchBoxComponent {
   constructor(private _router: Router) {}
 
   public searchItem() {
-    this._router.navigate([ 'items', {search: this.searchParams}]);
+    if (this.searchParams != '') {
+      this._router.navigate([ 'items', {search: this.searchParams}]);
+    }
   }
 
   public goHome() {
