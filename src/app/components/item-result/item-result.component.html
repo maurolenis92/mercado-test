@@ -1,9 +1,12 @@
-<div class="item-results">
-    <img class="item-results-image" src="../../../assets/icons/prueba.png" alt="">
+<div class="item-results" (click)="showDetail()">
+    <img class="item-results-image" [src]="data.picture" [alt]="'item-image-'+data.id">
     <div class="item-results-detail">
-        <span class="item-results-price">$1900</span>
-        <span  class="item-results-text-detail">Apple ipod touch 15gb</span>
-        <span  class="item-results-text-detail">Completo Unico!</span>
+        <div  class="item-results-price">
+            <span>${{data.price.amount}}</span>
+            <img *ngIf="data.free_shipping" src="../../../assets/icons/ic_shipping.png" alt="">
+        </div>
+        <span  class="item-results-text-detail">{{ data.title }}</span>
+        <span  class="item-results-text-detail">{{ data.condition }}</span>
     </div>
-    <span class="item-results-location">Ubicacion</span>
+    <span class="item-results-location">{{ data.address_state_name }}</span>
 </div>

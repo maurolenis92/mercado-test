@@ -1,0 +1,3 @@
+<div class="breadcrumb" *ngIf="categories">
+    <span  *ngFor="let item of categories; let i = index">{{ item }} {{(i + 1) !== categories.length ? '> ': ''}}</span>
+</div>

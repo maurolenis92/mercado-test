@@ -8,12 +8,19 @@
     &-logo {
         height: 40px;
     }
+    &-logo:hover {
+        cursor: pointer;
+    }
     &-input {
         height: 40px;
         padding: 0 1rem;
         border: 0;
         width: stretch;
         margin-left: 1.5rem;
+    }
+    input:focus {
+        outline: none;
+        border: 1px solid;
     }
     &-icon {
         @include mixin.createFlexbox(row, center, center, nowrap);
@@ -23,5 +30,8 @@
         img {
             height: 20px;
         }
+    }
+    &-icon:hover {
+        cursor: pointer;
     }
 }

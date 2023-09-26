@@ -1,0 +1,2 @@
+<app-breadcrumb *ngIf="data?.categories" [categories]="data?.categories"></app-breadcrumb>
+<app-item-result *ngFor="let item of data?.items" [data]="item"></app-item-result>

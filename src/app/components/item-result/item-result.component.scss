@@ -22,9 +22,16 @@
     &-price {
         font-size: 24px;
         margin-bottom: 32px;
+        img {
+            margin-left: 12px;
+        }
     }
     &-location {
         flex-grow: 1;
         font-size: 12px;
     }
+}
+
+.item-results:hover {
+    cursor: pointer;
 }

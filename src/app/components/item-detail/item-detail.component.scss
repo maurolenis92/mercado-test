@@ -10,6 +10,7 @@
         width: 680px;
     }
     &-first-column {
+        max-width: 680px;
         @include mixin.createFlexbox(column, stretch, stretch, nowrap);
     }
     &-price-description {
@@ -29,6 +30,7 @@
     &-button {
         background-color: var(--color-blue-meli);
         border: 0;
+        width: 200px;
         border-radius: 4px;
         height: 35px;
         color: var(--color-white-meli-2);

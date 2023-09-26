@@ -1,7 +1,7 @@
 <div class="search-box">
-    <img class="search-box-logo" src="../../../assets/icons/mercado-icon.png" alt="">
-    <input  class="search-box-input" type="search" placeholder="Nunca dejes de buscar">
-    <div class="search-box-icon">
-        <img src="../../../assets/icons/ic_Search@2x.png.png.png" alt="">
+    <img class="search-box-logo" (click)="goHome()" src="../../../assets/icons/mercado-icon.png" alt="image-logo-ml">
+    <input [(ngModel)]="searchParams" aria-label="search-input"  class="search-box-input" type="search" placeholder="Nunca dejes de buscar">
+    <div class="search-box-icon" (click)="searchItem()">
+        <img src="../../../assets/icons/ic_Search@2x.png.png.png" alt="icon-search">
     </div>
 </div>

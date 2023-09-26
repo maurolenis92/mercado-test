@@ -2,10 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { SearchBoxModule } from 'src/app/components/search-box/search-box.module';
-import { ItemResultModule } from 'src/app/components/item-result/item-result.module';
-import { ItemDetailModule } from 'src/app/components/item-detail/item-detail.module';
+import { RouterModule, Routes } from '@angular/router';
+import { SearchResultComponent } from '../search-result/search-result.component';
+import { ItemDetailComponent } from 'src/app/components/item-detail/item-detail.component';
 
-
+const routes: Routes = [
+  {
+    path: 'items',
+    loadChildren: () => import('../search-result/search-result.module').then(m =>m.SearchResultModule),
+    component: SearchResultComponent
+  },
+  {
+    path: 'items/:id',
+    loadChildren: () => import('../../components/item-detail/item-detail.module').then(m =>m.ItemDetailModule),
+    component: ItemDetailComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -14,8 +26,7 @@ import { ItemDetailModule } from 'src/app/components/item-detail/item-detail.mod
   imports: [
     CommonModule,
     SearchBoxModule,
-    ItemResultModule,
-    ItemDetailModule
+    RouterModule.forChild(routes)
   ],
   exports: [
     HomeComponent

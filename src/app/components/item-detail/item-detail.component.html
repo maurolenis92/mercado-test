@@ -1,14 +1,15 @@
-<div class="item-detail">
+<app-breadcrumb></app-breadcrumb>
+<div class="item-detail" *ngIf="data">
     <div class="item-detail-box-first">
         <div  class="item-detail-first-column">
-            <img class="item-detail-image" src="../../../assets/icons/prueba-detail.png" alt="">
+            <img class="item-detail-image" [src]="data.picture" [alt]="'image-detail-'+data.id">
             <span class="item-detail-description-title">Descripción del producto</span>
-            <p class="item-detail-description-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus odio, blanditiis dolore eos aspernatur non dignissimos. Optio maiores unde labore repellendus, doloribus cum natus dicta a, repudiandae blanditiis suscipit sequi?</p>
+            <p class="item-detail-description-text">{{ data.description }}</p>
         </div>
         <div class="item-detail-price-description">
-            <span class="item-detail-price-description-t1">Nuevo -- 234 vendidos</span>
-            <span class="item-detail-price-description-t2">Deco reverse sombrero oxford</span>
-            <span class="item-detail-price-description-t3">$1980</span>
+            <span class="item-detail-price-description-t1">{{ data.condition }} -- {{ data.sold_quantity }} vendidos</span>
+            <span class="item-detail-price-description-t2">{{ data.title }}</span>
+            <span class="item-detail-price-description-t3">${{ data.price.amount }}</span>
             <button class="item-detail-button" type="button">Comprar</button>
         </div>
     </div>
