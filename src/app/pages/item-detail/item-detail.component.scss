@@ -2,7 +2,6 @@
 
 .item-detail {
     padding: 32px;
-    margin-top: 16px;
     background-color: var(--color-white-meli-2);
     &-box-first {
         @include mixin.createFlexbox(row, stretch, stretch, nowrap);

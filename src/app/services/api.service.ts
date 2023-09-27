@@ -24,4 +24,12 @@ export class ApiService {
 
     return data;
   }
+
+  getCategory = async (id: string) => {
+    const urlReq = `${this.url}api/category/${id}`;
+    const respt = await fetch( urlReq );
+    const data = await respt.json();
+
+    return data;
+  }
 }

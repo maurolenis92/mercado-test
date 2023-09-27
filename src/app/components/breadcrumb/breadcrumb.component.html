@@ -1,3 +1,8 @@
-<div class="breadcrumb" *ngIf="categories">
+<div class="breadcrumb" *ngIf="categories; else categoryTemplate">
     <span  *ngFor="let item of categories; let i = index">{{ item }} {{(i + 1) !== categories.length ? '> ': ''}}</span>
 </div>
+<ng-template #categoryTemplate>
+    <div class="breadcrumb" >
+        <span>{{ category }}</span>
+    </div>
+</ng-template>

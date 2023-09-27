@@ -1,4 +1,4 @@
-<app-breadcrumb></app-breadcrumb>
+<app-breadcrumb *ngIf="data" [categoryParam]="data.category_id"></app-breadcrumb>
 <div class="item-detail" *ngIf="data">
     <div class="item-detail-box-first">
         <div  class="item-detail-first-column">
