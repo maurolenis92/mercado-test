@@ -4,7 +4,7 @@
     background-color: var(--color-yellow-meli);
     height: 60px;
     @include mixin.createFlexbox(row, center, flex-start, nowrap);
-    padding: 0 7rem;
+    padding: 0 112px;
     &-logo {
         height: 40px;
     }
@@ -13,10 +13,10 @@
     }
     &-input {
         height: 40px;
-        padding: 0 1rem;
+        padding: 0 16px;
         border: 0;
         width: stretch;
-        margin-left: 1.5rem;
+        margin-left: 24px;
     }
     input:focus {
         outline: none;

@@ -2,6 +2,7 @@
 
 .item-detail {
     padding: 32px;
+    margin-top: 16px;
     background-color: var(--color-white-meli-2);
     &-box-first {
         @include mixin.createFlexbox(row, stretch, stretch, nowrap);
@@ -30,7 +31,6 @@
     &-button {
         background-color: var(--color-blue-meli);
         border: 0;
-        width: 200px;
         border-radius: 4px;
         height: 35px;
         color: var(--color-white-meli-2);

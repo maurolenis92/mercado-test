@@ -3,6 +3,6 @@
 :host {
     @include mixin.createFlexbox(column, stretch, stretch, nowrap);
     section {
-        padding: 0 7rem;
+        padding: 0 112px;
     }
 }

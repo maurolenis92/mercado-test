@@ -25,6 +25,5 @@ export class ItemDetailComponent {
        });
       data.item.price.amount = formatter.format(data.item.price.amount).replace(data.item.price.currency, '');
     this.data = data.item;
-   console.log(data);
   }
 }

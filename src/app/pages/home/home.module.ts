@@ -4,7 +4,7 @@ import { HomeComponent } from './home.component';
 import { SearchBoxModule } from 'src/app/components/search-box/search-box.module';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchResultComponent } from '../search-result/search-result.component';
-import { ItemDetailComponent } from 'src/app/components/item-detail/item-detail.component';
+import { ItemDetailComponent } from 'src/app/pages/item-detail/item-detail.component';
 
 const routes: Routes = [
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'items/:id',
-    loadChildren: () => import('../../components/item-detail/item-detail.module').then(m =>m.ItemDetailModule),
+    loadChildren: () => import('../item-detail/item-detail.module').then(m =>m.ItemDetailModule),
     component: ItemDetailComponent
   }
 ]

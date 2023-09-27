@@ -12,7 +12,6 @@ export class SearchResultComponent {
   public data: any
 
   constructor (private _api: ApiService, private _activeRoute: ActivatedRoute) {
-      console.log(_activeRoute);
       _activeRoute.params.subscribe( t => {
         const {search} = t;
         this.getResults(search);
@@ -32,6 +31,5 @@ export class SearchResultComponent {
      }
      this.data = data;
    }
-   console.log(data);
   }
 }
